@@ -1,0 +1,17 @@
+.about{
+  max-width: var(--max-width);
+  display: grid;
+  grid: min-content 1fr / 60% 40%;
+  row-gap: 4rem;
+  column-gap: 2rem;
+  margin: 0 auto;
+  padding: 2rem;
+
+  &__text {
+    grid-column: 1 / 2;
+  }
+  
+  &__icons {
+    grid-column: 2 / -1;
+  }
+}

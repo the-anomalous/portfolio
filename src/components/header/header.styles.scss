@@ -1,0 +1,11 @@
+.header{
+  height: 94vh; 
+  background-image: linear-gradient( rgba(158, 158, 158, .1), var(--color-primary));
+  
+  &__text{
+    max-width: var(--max-width);
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding: 2rem;
+  }
+}

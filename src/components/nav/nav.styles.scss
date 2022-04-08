@@ -1,0 +1,36 @@
+.nav{
+  height: 7rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo{
+    width: 7rem;
+    height: 5rem;
+    margin-left: 3rem;
+  }
+
+  &__img{
+    height: 100%;
+    width: 100%;
+  }
+
+  &__links{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    font-size: 1.4rem;
+    color: var(--color-white);
+    
+
+    &__item{
+      &:hover{
+        color: var(--color-secondary);
+      }
+    }
+  }
+}
