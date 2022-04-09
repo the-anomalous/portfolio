@@ -1,5 +1,9 @@
-.App > *{
+.App > * {
+  max-width: var(--max-width);
+  margin: 0 auto;
+
   &:not(last-child){
     margin-bottom: var(--gutter-horizontal);
   }
 }
+

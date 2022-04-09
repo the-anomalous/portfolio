@@ -6,13 +6,15 @@
   // SECONDARY COLORS
   --color-secondary:#EA281E;
   --color-secondary-light: rgba(234, 40, 30, .1);
-  --color-secondary-dark: #CD1C13;
+  --color-secondary-dark: hsl(3, 83%, 44%);
 
   // TERTIARY COLORS
   --color-white:#F7F7FA;
   --color-grey: #999999;
+  --color-grey-light: #CCCCCC;
 
   // SPACING
-  --max-width: 95rem;
+  --max-width: 98rem;
   --gutter-horizontal: 14rem
 }
+

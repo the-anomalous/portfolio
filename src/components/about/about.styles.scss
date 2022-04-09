@@ -1,17 +1,43 @@
 .about{
-  max-width: var(--max-width);
   display: grid;
-  grid: min-content 1fr / 60% 40%;
+  grid: min-content 1fr / 60% 34%;
   row-gap: 4rem;
-  column-gap: 2rem;
-  margin: 0 auto;
-  padding: 2rem;
-
+  column-gap: 6rem;
+    
   &__text {
     grid-column: 1 / 2;
+    align-self: center;
+  
+    display: grid;
+    row-gap: 2rem;
+    padding: 1rem 0;
+
+    p{
+      color: var(--color-grey);
+      font-size: 1.8rem;
+      line-height: 3rem;
+    }
   }
   
   &__icons {
     grid-column: 2 / -1;
   }
+  
+  &__icon{
+    height: 9rem;
+    width: 100%;
+    fill: var(--color-white);
+  }
+
+  &__icons{
+    display: grid;
+    grid: repeat(2, 1fr) / repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
+
+    &--3{
+      height: 8rem;
+    }
+  }
+
 }
