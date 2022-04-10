@@ -1,13 +1,39 @@
 .project {
   width: 100%;
   display: flex;
-  margin-top: 4rem;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none;
 
+  display: flex;
+  justify-content: space-between;
+
+  &:not(:last-child) {
+    margin-bottom: var(--gutter-horizontal-sm);
+  }
+
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+
+    .project__name{
+      text-align: left;
+    }
+
+    .project__buttons {
+      flex-direction: row-reverse;
+
+      & .btn__secondary{
+        margin: 0;
+      }
+    }
+  }
+
+  &__name {
+    text-align: right;
+  }
+
   &__photos{
-    width: 60%;
+    width: 50%;
     position: relative;
   }
 
@@ -15,6 +41,7 @@
     width: 28rem;
     opacity: 95%;
     z-index: 5;
+    cursor: pointer;
     border-radius: 2px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
@@ -22,6 +49,7 @@
     top: 50%;
     left: 50%;
     
+    transition: all .2s linear .1s;
 
     &:hover {
       transform: scale(1.2);
@@ -29,6 +57,7 @@
       outline: var(--color-secondary) solid 6px;
       outline-offset: 1rem; 
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      opacity: 100%;
     }
 
     &--1 {
@@ -48,14 +77,14 @@
   }
 
   &__details{
-    width: 40%;
+    width: 42%;
     padding: 1rem;
     display: flex;
     flex-direction: column;
   
     & > * {
       &:not(last-child) {
-        margin-bottom: 2.6rem;     
+        margin-bottom: 3rem;     
       }
     }
   }
@@ -63,8 +92,9 @@
   &__technologies {
     display: flex;
     justify-content: space-between;
-
+    
     & > * {
+      text-transform: capitalize;
       padding: 4px 6px;
       background-color: var(--color-primary-light);
       border-radius: 2px;
@@ -82,5 +112,9 @@
   &__buttons{
     display: flex;
     justify-content: flex-end;
+    
+    & > * {
+      margin-left: 2rem;
+    }
   }
 }

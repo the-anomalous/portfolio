@@ -7,6 +7,54 @@
   &__text{
     max-width: var(--max-width);
     margin: 0 auto;
-    margin-top: 5rem;
+    margin-top: 8rem;
+  }
+
+  .social {
+  position: fixed;
+  bottom: 0;
+  right: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+  height: 55%;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 16rem;
+    background-color: var(--color-white);
+  }
+
+  &__link {
+
+    &__icon {
+      fill: var(--color-white);
+      height: 2rem;
+      width: 2rem;
+
+      transition: all .1s;
+    
+      &--1{
+        stroke: var(--color-white);
+      }
+
+      &:hover {
+        fill: var(--color-secondary);
+      }
+
+      &--1:hover {
+        stroke: var(--color-secondary);
+      }
+
+      &:active {
+        transform: translateY(1.6px);
+      }
+    }
   }
 }
+} 

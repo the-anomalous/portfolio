@@ -3,8 +3,11 @@ import './about.styles.scss'
 import Icons from '../../assets/sprites.svg'
 
 import { H2 } from '../typography/typography.component'
+import Icon from '../icons/icons.component'
 
 const About = () => {
+  const icons = ['react', 'firebase', 'javascript', 'sass']
+
   return (
     <section className='about' id='about'>
       <H2>
@@ -32,18 +35,13 @@ const About = () => {
         </p>
       </div>
       <div className="about__icons">
-        <svg className="about__icon about__icons--1">
-          <use xlinkHref={`${Icons}#icon-react`} ></use>
-        </svg>
-        <svg className="about__icon about__icons--2">
-          <use xlinkHref={`${Icons}#icon-firebase`}></use>
-        </svg>
-        <svg className="about__icon about__icons--3">
-          <use xlinkHref={`${Icons}#icon-javascript`}></use>
-        </svg>
-        <svg className="about__icon about__icons--4">
-          <use xlinkHref={`${Icons}#icon-sass`}></use>
-        </svg>
+        {
+          icons.map((name, index) =>
+            <Icon
+              className={`about__icon about__icons--${index + 1}`}
+              key={name}
+              name={name} />)
+        }
       </div>
     </section>
   )

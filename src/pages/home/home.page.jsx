@@ -3,14 +3,14 @@ import './home.styles.scss'
 
 import Header from '../../components/header/header.component'
 import About from '../../components/about/about.component'
-import Projects from '../../components/projects/projects.component'
+import Work from '../../components/work/work.component'
 
 const HomePage = () => {
   return (
     <>
       <Header />
       <About />
-      <Projects/>
+      <Work/>
     </>
   )
 }

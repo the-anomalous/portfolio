@@ -7,11 +7,13 @@
   transition: all;
   transition-delay: .1s;
 
+
+  // PRIMARY BUTTON STYLES
+
   &__primary{
     display: flex;
     align-items: center;
-
-    margin-right: 2rem;
+    
     color: var(--color-white);
     background-color: var(--color-secondary);
     
@@ -33,6 +35,10 @@
       margin-right: .8rem;
     }
   }
+
+
+
+  // SECONDARY BUTTON STYLES
 
   &__secondary {
     display: flex;
@@ -57,6 +63,61 @@
       width: 1.6rem;
       height: 1.6rem;
       margin-right: .8rem;
+    }
+  }
+
+
+  // TERTIARY BUTTON STYLES
+
+  &__tertiary {
+    position: relative;
+
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: var(--color-white);
+    padding: 4px 1px;
+    margin-left: 2px;
+
+    &::before {
+      content: '';
+      height: 1px;
+      width: 100%;
+      background-color: var(--color-white);
+      
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      height: 1px;
+      width: 100%;
+      transform: scale(-.5);
+      
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      transition: transform 1s linear;
+      transform-origin: center;
+    }
+
+
+    &:hover{
+      color: var(--color-secondary);
+      
+      &::after {
+        content: '';
+        height: 1px;
+        background-color: var(--color-secondary);
+        transform: scale(1);
+      }
+    }
+
+    &:active {
+      top: 1px;
     }
   }
 }

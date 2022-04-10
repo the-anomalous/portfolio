@@ -17,13 +17,13 @@ const Navigation = () => {
           <a href="#about" className='link' >About</a>
         </li>
         <li className="nav__links__item">
-          <a className='link' href="#projects" >Projects</a>
+          <a href="#work" className='link' >Projects</a>
         </li>
         <li className="nav__links__item">
-          <a className='link' href="#contact">Contact</a>
+          <a href="#contact" className='link' >Contact</a>
         </li>
         <li className="nav__links__item">
-          <a className='link' href="#">Resume</a>
+          <a href="#" className='link'>Resume</a>
         </li>
       </ul>
     </nav>
