@@ -26,3 +26,11 @@ export const BtnTertiary = ({children}) => {
     </a>
   )
 }
+
+export const BtnSubmit = ({ children }) => {
+  return (
+    <button type='submit' onClick={(e) => e.preventDefault()} className='btn btn__secondary'>
+      {children}
+    </button>
+  )
+}

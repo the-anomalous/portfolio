@@ -46,16 +46,20 @@
 
     border: 1px solid var(--color-secondary);
     color: var(--color-secondary);
+    background-color: transparent;
+    outline: none;
 
     &:hover{
       background-color: var(--color-secondary-light);
       transform: translateY(-1.5px);
+      cursor: pointer;
     }
 
     &:active {
       display: flex;
       align-items: center;
       transform: translateY(.5px);
+      cursor: pointer;
     }
 
     &__icon {
@@ -100,7 +104,7 @@
       bottom: 0;
       left: 0;
 
-      transition: transform 1s linear;
+      transition: transform .6s linear;
       transform-origin: center;
     }
 

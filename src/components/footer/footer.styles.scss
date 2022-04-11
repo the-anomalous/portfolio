@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  & > * {
+    margin-bottom: 2rem;
+  }
+
+  &__logo {
+    height: 10rem;
+  }
+
+  &__img{
+    height: 100%;
+    width: 100%;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+  }
+}
