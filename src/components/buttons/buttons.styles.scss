@@ -7,12 +7,15 @@
   transition: all;
   transition-delay: .1s;
 
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
 
   // PRIMARY BUTTON STYLES
 
   &__primary{
     display: flex;
     align-items: center;
+    justify-content: center;
     
     color: var(--color-white);
     background-color: var(--color-secondary);
@@ -43,6 +46,7 @@
   &__secondary {
     display: flex;
     align-items: center;
+    justify-content: center;
 
     border: 1px solid var(--color-secondary);
     color: var(--color-secondary);

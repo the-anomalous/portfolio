@@ -15,23 +15,25 @@ const About = () => {
       </H2>
       <div className='about__text'>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor viverra lacinia quam consectetur. Aliquam nunc, id volutpat tristique <span className="highlight">
-            turpis felis duis aliquam. Tellus orci vulputate augue dignissim diamid&nbsp;
+          Hey folks, I'm Aditya, a freelance web developer&nbsp;
+          <span className="highlight">
+            specializing in developing premium user interfaces using React.js. &nbsp;
           </span>
-           massa.Lobortis diam dui amet erat nisl consectetur posuere velit. 
+          I started web development back when the pandemic hit, very soon realized it was fun. What got me most excited about it was all the animations and interactions that I can bring to a website. 
         </p>
         <p>
+          Fast forward to today,&nbsp;
           <span className="highlight">
-            Nisl feugiat dignissim urna, ullamcorper ullamcorper metus&nbsp;
+            I'm working full-time as a freelance developer helping businesses to create better products for the web.&nbsp;
           </span>
-          , aliquet. Amet enim hac turpis vehicula sem quis vel.
+           I'm constantly looking for more opportunities to grow as a developer and learn from others.
         </p>
-        <p>
-          Urna porttitor a facilisis vitae, eu laoreet odio curabitur.
+          <p>
+          That was a pretty typical intro I guess, well, in my spare time, I like listening to a podcast, or watching an anime.&nbsp;
           <span className="highlight">
-            Egestas cras mauris pellentesque nunc fringilla a diam.&nbsp;
+            I'm currently working with javascript, react.js, and firebase,&nbsp;
           </span>
-           Purus imperdiet consequat enim commodo consectetur.
+          and highly motivated to learn more about the web.
         </p>
       </div>
       <div className="about__icons">

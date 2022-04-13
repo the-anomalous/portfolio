@@ -3,11 +3,10 @@ import './project.styles.scss'
 
 import { H3 } from '../typography/typography.component'
 import { BtnPrimary, BtnSecondary, BtnTertiary } from '../buttons/buttons.component'
-import Icons from '../../assets/sprites.svg'
 import Icon from '../icons/icons.component'
 
 const Project = ({details}) => {
-  const {name, description, technologies} = details
+  const {name, description, technologies, route} = details
 
   return (
     <div className="project">
@@ -34,7 +33,7 @@ const Project = ({details}) => {
         <div className="project__description">
           <p>
             {description}
-            <BtnTertiary>
+            <BtnTertiary route={route} >
               read more
             </BtnTertiary>
           </p>

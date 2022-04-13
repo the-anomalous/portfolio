@@ -2,28 +2,29 @@
 import React from 'react'
 import './buttons.styles.scss'
 
+import { Link } from 'react-router-dom'
 
-export const BtnPrimary = ({children}) => {
+export const BtnPrimary = ({children, className}) => {
   return (
-    <a className='btn btn__primary'>
+    <a className={`btn btn__primary ${className}`}>
       {children}
     </a>
   )
 }
 
-export const BtnSecondary = ({children}) => {
+export const BtnSecondary = ({children, className}) => {
   return (
-    <a className='btn btn__secondary'>
+    <a className={`btn btn__secondary ${className}`}>
       {children}
     </a>
   )
 }
 
-export const BtnTertiary = ({children}) => {
+export const BtnTertiary = ({children, route}) => {
   return (
-    <a className='btn btn__tertiary'>
+    <Link className='btn btn__tertiary' to={route}>
       {children}
-    </a>
+    </Link>
   )
 }
 

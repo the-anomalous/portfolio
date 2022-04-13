@@ -2,6 +2,7 @@
   font-size: 8rem;
   line-height: 10rem;
   letter-spacing: .1rem;
+  text-transform: capitalize;
 
   &--sub{
     font-family: 'Lato', sans-serif;
@@ -9,6 +10,7 @@
     color: var(--color-grey);
     line-height: 7rem;
     letter-spacing: .5px;
+    text-transform: none;
   }
 }
 
@@ -40,4 +42,5 @@
   line-height: 3.6rem;
   color: var(--color-white);
   margin-bottom: 1.8rem; 
+  text-transform: capitalize;
 }
