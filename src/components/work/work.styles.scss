@@ -1,5 +1,9 @@
 .work{
   .heading2{
     margin-bottom: 2rem;
+
+    @media only screen and (max-width: 56.25em) {
+      margin-bottom: 4rem;
+    }
   }
 }

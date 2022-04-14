@@ -6,14 +6,16 @@ import { BtnPrimary, BtnSecondary, BtnTertiary } from '../buttons/buttons.compon
 import Icon from '../icons/icons.component'
 
 const Project = ({details}) => {
-  const {name, description, technologies, route} = details
-
+  const {name, description, technologies, route, imgPath, appLink, githubLink } = details
+  
   return (
     <div className="project">
       <div className="project__photos">
-        <img src={require('../../assets/insta 1.JPG')} alt="feed" className="project__photo project__photo--1" />
-        <img src={require('../../assets/insta 2.JPG')} alt="profile" className="project__photo project__photo--2" />
-        <img src={require('../../assets/insta 3.JPG')} alt="profile" className="project__photo project__photo--3" />
+        {
+          imgPath.map((img, index) => 
+            <img src={require('../../assets/img/insta 1.png')} alt={`${name} ${index+1}`} className={`project__photo project__photo--${index+1}`} key={`${name} ${index+1}`} />
+          )
+        }
       </div>
 
       <div className="project__details">
@@ -40,12 +42,12 @@ const Project = ({details}) => {
         </div>
 
         <div className="project__buttons">
-          <BtnPrimary>
+          <BtnPrimary link={appLink}>
             <Icon className='btn__primary__icon' name='external-link'/>
             visit site
           </BtnPrimary>
 
-          <BtnSecondary>
+          <BtnSecondary link={githubLink}>
           <Icon className='btn__secondary__icon' name='github' />
             view code
           </BtnSecondary>

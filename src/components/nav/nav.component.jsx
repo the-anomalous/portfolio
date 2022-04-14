@@ -1,7 +1,8 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import {ReactComponent as Logo} from '../../assets/logo.svg'
 import './nav.styles.scss'
+
+import { ReactComponent as Logo } from '../../assets/logo.svg'
+import Menu from '../menu/menu.component'
 
 const Navigation = () => {
   return (
@@ -10,7 +11,9 @@ const Navigation = () => {
         <a href="#home">
           <Logo className='nav__img'/>
         </a>
-      </figure>
+      </figure> 
+
+      {/* <Menu/> */}
 
       <ul className="nav__links">
         <li className="nav__links__item">
@@ -23,7 +26,7 @@ const Navigation = () => {
           <a href="#contact" className='link' >Contact</a>
         </li>
         <li className="nav__links__item">
-          <a href="#" className='link'>Resume</a>
+          <a href="#resume" className='link'>Resume</a>
         </li>
       </ul>
     </nav>

@@ -1,20 +1,19 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import './buttons.styles.scss'
 
 import { Link } from 'react-router-dom'
 
-export const BtnPrimary = ({children, className}) => {
+export const BtnPrimary = ({children, className, link}) => {
   return (
-    <a className={`btn btn__primary ${className}`}>
+    <a className={`btn btn__primary ${className}`} target='_blank' rel="noreferrer" href={link}>
       {children}
     </a>
   )
 }
 
-export const BtnSecondary = ({children, className}) => {
+export const BtnSecondary = ({children, className, link}) => {
   return (
-    <a className={`btn btn__secondary ${className}`}>
+    <a className={`btn btn__secondary ${className}`} target='_blank' rel="noreferrer" href={link}>
       {children}
     </a>
   )
