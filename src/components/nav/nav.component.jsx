@@ -13,7 +13,7 @@ const Navigation = () => {
         </a>
       </figure> 
 
-      {/* <Menu/> */}
+      <Menu/>
 
       <ul className="nav__links">
         <li className="nav__links__item">

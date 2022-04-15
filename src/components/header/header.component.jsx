@@ -3,8 +3,7 @@ import './header.styles.scss'
 
 import Navigation from '../nav/nav.component'
 import { H1 } from '../typography/typography.component'
-import Icon from '../icons/icons.component'
-import {socialIcons} from '../../assets/data'
+import SocialMedia from '../socialMedia/socialMedia.component'
 
 const Header = () => {
   return (
@@ -20,7 +19,7 @@ const Header = () => {
         </H1>
       </div>
 
-      <div className="social">
+      {/* <div className="social">
         {
           socialIcons.map(({name, link}, index) =>
             <a href={link} className={`social__link social__link__icon--${index + 1}`} target='_blank' rel="noreferrer" key={name}>
@@ -28,7 +27,9 @@ const Header = () => {
             </a>
           )
         }
-      </div>
+      </div> */}
+
+      <SocialMedia className='header__social' />
     </header>
   )
 }

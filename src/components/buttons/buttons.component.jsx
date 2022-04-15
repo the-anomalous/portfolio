@@ -1,8 +1,6 @@
 import React from 'react'
 import './buttons.styles.scss'
 
-import { Link } from 'react-router-dom'
-
 export const BtnPrimary = ({children, className, link}) => {
   return (
     <a className={`btn btn__primary ${className}`} target='_blank' rel="noreferrer" href={link}>
@@ -21,9 +19,9 @@ export const BtnSecondary = ({children, className, link}) => {
 
 export const BtnTertiary = ({children, route}) => {
   return (
-    <Link className='btn btn__tertiary' to={route}>
+    <a className='btn btn__tertiary' href={route}>
       {children}
-    </Link>
+    </a>
   )
 }
 

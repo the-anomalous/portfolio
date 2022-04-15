@@ -33,7 +33,7 @@ const About = () => {
           <span className="highlight">
             I'm currently working with javascript, react.js, and firebase,&nbsp;
           </span>
-          and highly motivated to learn more about the web.
+          and I'm highly motivated to learn more about the web.
         </p>
       </div>
       <div className="about__icons">

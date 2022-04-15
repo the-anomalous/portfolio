@@ -2,11 +2,11 @@ import React from 'react'
 import './project.styles.scss'
 
 import { H3 } from '../typography/typography.component'
-import { BtnPrimary, BtnSecondary, BtnTertiary } from '../buttons/buttons.component'
+import { BtnPrimary, BtnSecondary } from '../buttons/buttons.component'
 import Icon from '../icons/icons.component'
 
 const Project = ({details}) => {
-  const {name, description, technologies, route, imgPath, appLink, githubLink } = details
+  const {name, description, technologies, imgPath, appLink, githubLink } = details
   
   return (
     <div className="project">
@@ -35,9 +35,9 @@ const Project = ({details}) => {
         <div className="project__description">
           <p>
             {description}
-            <BtnTertiary route={route} >
+            {/* <BtnTertiary route={route} >
               read more
-            </BtnTertiary>
+            </BtnTertiary> */}
           </p>
         </div>
 

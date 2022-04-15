@@ -18,7 +18,7 @@
     margin: auto;
   }
 
-  .social {
+  &__social {
   position: fixed;
   bottom: 0;
   right: 4rem;
@@ -42,31 +42,30 @@
     background-color: var(--color-white);
   }
 
-  &__link {
+  &_link {
+    fill: var(--color-white);
+    height: 2rem;
+    width: 2rem;
 
-    &__icon {
-      fill: var(--color-white);
-      height: 2rem;
-      width: 2rem;
-
-      transition: all .1s;
+    transition: all .1s;
     
-      &--1{
-        stroke: var(--color-white);
-      }
-
-      &:hover {
-        fill: var(--color-secondary);
-      }
-
-      &--1:hover {
-        stroke: var(--color-secondary);
-      }
-
-      &:active {
-        transform: translateY(1.6px);
-      }
+    &--twitter{
+      stroke: var(--color-white);
     }
+    
+    &:hover {
+      transform: translateY(-1.5px);
+      fill: var(--color-secondary);
+    }
+    
+    &--twitter:hover {
+      stroke: var(--color-secondary);
+    }
+
+    &:active {
+      transform: translateY(1.6px);
+    }
+    
   }
 }
 } 
