@@ -23,16 +23,25 @@
     width: 40%;
     height: 100%;
     font-size: 1.6rem;
+
+    font-weight: 600;
+    text-transform: uppercase;
     
     @media only screen and (max-width: 56.25em) {
       width: 50%;
     }
 
-    @media only screen and (max-width: 31.25em) {
+    @media only screen and (max-width: 56.25em) {
       display: none;
     }
     
     &__item{
+      transition: all;
+      transition-delay: .1s;
+      
+      &:hover {
+        transform: translateY(-2px);
+      }
       
       .link {
         transition: all;
@@ -41,6 +50,7 @@
         
         &:hover{
           color: var(--color-secondary);
+          transform: translateY(10px);
         }
       }
 

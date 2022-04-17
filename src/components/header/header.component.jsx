@@ -9,25 +9,18 @@ const Header = () => {
   return (
     <header className='header'>
       <Navigation />
-      
+    
       <div className="header__text">
         <H1>
           <p className='heading1--sub' >
-            Hola!! Humans of Internet, Myself <span className="highlight">Aditya</span>
+            Hola!! Humans of Internet 
           </p>
-          I&rsquo;m Freelance Developer Turning Your Ideas Into Reality
+          Myself <span className="highlight">Aditya</span>,&nbsp; <br/>
+          I&rsquo;m Freelance Developer 
+          {/* I&rsquo;m Freelance Developer&nbsp;<br/>
+          Turning Ideas Into <br/> Reality  */}
         </H1>
       </div>
-
-      {/* <div className="social">
-        {
-          socialIcons.map(({name, link}, index) =>
-            <a href={link} className={`social__link social__link__icon--${index + 1}`} target='_blank' rel="noreferrer" key={name}>
-              <Icon className='social__link__icon' name={name} />
-            </a>
-          )
-        }
-      </div> */}
 
       <SocialMedia className='header__social' />
     </header>

@@ -7,8 +7,8 @@
   transition: all;
   transition-delay: .1s;
 
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
+  -webkit-user-select: none; 
+  user-select: none;
 
   // PRIMARY BUTTON STYLES
 

@@ -1,11 +1,20 @@
 .header{
   height: 94vh; 
-  background-image: linear-gradient( rgba(158, 158, 158, .1), var(--color-primary));
   max-width: 100%;
   margin: 0;
   
   display: flex;
   flex-direction: column;
+  
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0.01%, var(--color-primary) 99%), 
+      url('../../assets/img/IMG_20210304_224434-modified.jpg');
+  background-size: 150%;
+  background-position: -18rem 36%;
+  background-repeat: no-repeat;
+
+  @media only screen and (max-width: 31.25em) {
+    background-position: -10rem 36%;
+  }
 
   .heading1 {
     @media only screen and (max-width: 56.25em) {
@@ -15,7 +24,10 @@
 
   &__text{
     max-width: var(--max-width);
-    margin: auto;
+    // margin: auto;
+
+    margin-top: auto;
+    margin-bottom: 3rem;
   }
 
   &__social {
