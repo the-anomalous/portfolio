@@ -52,14 +52,14 @@
     transition: all 1s;
 
     &--active {
-      transform: scale(60);
+      transform: scale(100);
       z-index: 10;
       opacity: 1;
 
       height: 3rem;
       width: 3rem;
 
-      transition: transform .8s;
+      transition: transform 1s;
     }
   }
 

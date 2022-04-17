@@ -18,6 +18,44 @@
 
   &__text {
     font-size: 1.8rem;
+    font-family: 'Lato', 'sans-serif';
     text-transform: capitalize;
+    color: var(--color-grey-light);
+    letter-spacing: 1px;
+  }
+
+  &__social{
+    display: none;
+    
+    fill: var(--color-white);
+    width: 50%;
+    
+    @media only screen and (max-width: 31.25em) {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &_link{
+      width: 2.5rem;
+      height: 2.5rem;
+
+      &--twitter {
+        stroke: var(--color-white);
+      }
+
+      &:hover {
+        transform: translateY(-1.5px);
+        fill: var(--color-secondary);
+      }
+    
+      &--twitter:hover {
+        stroke: var(--color-secondary);
+      }
+
+      &:active {
+        transform: translateY(1.6px);
+      }
+    }
+  
   }
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import './footer.styles.scss'
 
 import { ReactComponent as Logo } from '../../assets/logo.svg'
-import { H3 } from '../typography/typography.component'
+import SocialMedia from '../socialMedia/socialMedia.component'
 
 const Footer = () => {
   return (
@@ -15,6 +15,10 @@ const Footer = () => {
       <p className='footer__text'>
         designed and developed by aditya musale
       </p>
+      {/* <p className='footer__text'>
+        contact : adityamusale4477@gmail.com
+      </p> */}
+      <SocialMedia className='footer__social' />
     </footer>
   )
 }
