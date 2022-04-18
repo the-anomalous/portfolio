@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './project.styles.scss'
 
 import { H3 } from '../typography/typography.component'
 import { BtnPrimary, BtnSecondary } from '../buttons/buttons.component'
 import Icon from '../icons/icons.component'
+import appearOnScroll from '../../observers/appearOnScroll'
 
 const Project = ({details}) => {
   const {name, description, technologies, imgPath, appLink, githubLink } = details
-  
+  const projectRef = useRef()
+
+  useEffect(() => {
+    appearOnScroll.observe(projectRef.current)
+  }, [projectRef])
+
   return (
-    <div className="project">
+    <div className="project" ref={projectRef} >
       <div className="project__photos">
         {
           imgPath.map((img, index) => 

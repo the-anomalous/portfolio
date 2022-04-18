@@ -1,18 +1,25 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import './about.styles.scss'
-import Icons from '../../assets/sprites.svg'
 
 import { H2 } from '../typography/typography.component'
 import Icon from '../icons/icons.component'
+import appearOnScroll from '../../observers/appearOnScroll'
 
 const About = () => {
   const icons = ['react', 'firebase', 'javascript', 'sass']
+  const aboutRef = useRef(null)
+
+  useEffect(() => {
+    appearOnScroll.observe(aboutRef.current)
+  }, [aboutRef])
+  
 
   return (
-    <section className='about' id='about'>
+    <section className='about' id='about' ref={aboutRef}>
       <H2>
         a little more about me  
       </H2>
+
       <div className='about__text'>
         <p>
           Hey folks, I'm Aditya, a freelance web developer&nbsp;
@@ -36,6 +43,7 @@ const About = () => {
           and I'm highly motivated to learn more about the web.
         </p>
       </div>
+
       <div className="about__icons">
         {
           icons.map((name, index) =>

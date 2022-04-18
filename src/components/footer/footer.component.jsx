@@ -15,10 +15,10 @@ const Footer = () => {
       <p className='footer__text'>
         designed and developed by aditya musale
       </p>
-      {/* <p className='footer__text'>
-        contact : adityamusale4477@gmail.com
-      </p> */}
       <SocialMedia className='footer__social' />
+      {/* <p className="footer__email">
+        adityamusale4477@gmail.com
+      </p> */}
     </footer>
   )
 }

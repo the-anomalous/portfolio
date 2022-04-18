@@ -36,7 +36,12 @@ const Menu = () => {
           </li>
         </ul>
 
-        <SocialMedia className='menu__social' />
+        <div className="menu__contact">
+          <SocialMedia className='menu__social' />
+          <p className="menu__email">
+            adityamusale4477@gmail.com
+          </p>
+        </div>
       </div>
 
     </div>

@@ -7,6 +7,15 @@
   justify-content: space-between;
   // flex-wrap: wrap;
 
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: all .4s ease-in;
+
+  &.appear {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   @media only screen and (max-width: 56.25em) {
     flex-direction: column;
     padding: 0 6rem;

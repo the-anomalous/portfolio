@@ -3,6 +3,17 @@
   grid: min-content 1fr / 60% 34%;
   row-gap: 4rem;
   column-gap: 6rem;
+  opacity: 0;
+  transform: translateY(4rem);
+
+  transition: all .4s ease-in;
+  transition-delay: .2s;
+
+  &.appear {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
 
   @media only screen and (max-width: 56.25em) {
     grid: min-content 1fr / 1fr;

@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import './form.styles.scss'
 
 import { H2 } from '../typography/typography.component'
 import { BtnSubmit } from '../buttons/buttons.component'
+import appearOnScroll from '../../observers/appearOnScroll'
 
 const Form = () => {
+  const formRef = useRef()
+  
+  useEffect(() => {
+    appearOnScroll.observe(formRef.current)
+  }, [formRef])
+
   return (
-    <section className='contact' id='contact' >
+    <section className='contact' id='contact' ref={formRef} >
       <H2>
         let&rsquo;s connect
       </H2>
