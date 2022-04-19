@@ -3,7 +3,7 @@ import './about.styles.scss'
 
 import { H2 } from '../typography/typography.component'
 import Icon from '../icons/icons.component'
-import appearOnScroll from '../../observers/appearOnScroll'
+import appearOnScroll from '../../observers/appearOnScroll.observer'
 
 const About = () => {
   const icons = ['react', 'firebase', 'javascript', 'sass']

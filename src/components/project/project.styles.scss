@@ -5,6 +5,7 @@
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
   // flex-wrap: wrap;
 
   opacity: 0;
@@ -63,8 +64,8 @@
   }
 
   &__photos{
-    width: 50%;
-    position: relative;
+    width: 54%;
+    // position: relative;
 
     @media only screen and (max-width: 56.25em) {
       width: 100%;
@@ -72,16 +73,16 @@
   }
 
   &__photo{
-    width: 28rem;
+    width: 100%;
     opacity: 95%;
-    z-index: 5;
-    cursor: pointer;
+    // z-index: 5;
+    // cursor: pointer;
     border-radius: 2px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
 
     @media only screen and (max-width: 56.25em) {
       position: static;
@@ -90,42 +91,42 @@
     
     transition: all .2s linear .1s;
 
-    &:hover {
-      transform: scale(1.2);
-      z-index: 10;
-      outline: var(--color-secondary) solid 6px;
-      outline-offset: 1rem; 
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      opacity: 100%;
+    // &:hover {
+    //   transform: scale(1.2);
+    //   z-index: 10;
+    //   outline: var(--color-secondary) solid 6px;
+    //   outline-offset: 1rem; 
+    //   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    //   opacity: 100%;
 
-      @media only screen and (max-width: 56.25em) {
-        transform: scale(1);
-        outline: none;
-      }
-    }
+    //   @media only screen and (max-width: 56.25em) {
+    //     transform: scale(1);
+    //     outline: none;
+    //   }
+    // }
 
-    &--1 {
-      top: 4rem;
-      left: 2rem;
-    }
+    // &--1 {
+    //   top: 4rem;
+    //   left: 2rem;
+    // }
 
-    &--2 {
-      top: 8rem;
-      left: 22rem;
+    // &--2 {
+    //   top: 8rem;
+    //   left: 22rem;
 
-      @media only screen and (max-width: 56.25em) {
-        display: none;
-      }
-    }
+    //   @media only screen and (max-width: 56.25em) {
+    //     display: none;
+    //   }
+    // }
     
-    &--3 {
-      top: 14rem;
-      left: 14rem;
+    // &--3 {
+    //   top: 14rem;
+    //   left: 14rem;
       
-      @media only screen and (max-width: 56.25em) {
-        display: none;
-      }
-    }
+    //   @media only screen and (max-width: 56.25em) {
+    //     display: none;
+    //   }
+    // }
   }
 
   &__details{

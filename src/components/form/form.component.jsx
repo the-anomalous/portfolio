@@ -3,7 +3,7 @@ import './form.styles.scss'
 
 import { H2 } from '../typography/typography.component'
 import { BtnSubmit } from '../buttons/buttons.component'
-import appearOnScroll from '../../observers/appearOnScroll'
+import appearOnScroll from '../../observers/appearOnScroll.observer'
 
 const Form = () => {
   const formRef = useRef()

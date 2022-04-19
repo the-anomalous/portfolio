@@ -4,7 +4,7 @@ import './work.styles.scss'
 import { H2 } from '../typography/typography.component'
 import Project from '../project/project.component'
 import data from '../../assets/data'
-import appearOnScroll from '../../observers/appearOnScroll'
+import appearOnScroll from '../../observers/appearOnScroll.observer'
 
 const Work = () => {
   const workRef = useRef()

@@ -4,24 +4,40 @@ import './project.styles.scss'
 import { H3 } from '../typography/typography.component'
 import { BtnPrimary, BtnSecondary } from '../buttons/buttons.component'
 import Icon from '../icons/icons.component'
-import appearOnScroll from '../../observers/appearOnScroll'
+
+import appearOnScroll from '../../observers/appearOnScroll.observer'
+import playOnFocus from '../../observers/playOnFocus.observer'
 
 const Project = ({details}) => {
-  const {name, description, technologies, imgPath, appLink, githubLink } = details
+  const {name, description, technologies, appLink, githubLink } = details
   const projectRef = useRef()
+  const videoRef = useRef()
 
   useEffect(() => {
     appearOnScroll.observe(projectRef.current)
-  }, [projectRef])
+    playOnFocus.observe(videoRef.current)
+  }, [videoRef])
 
   return (
     <div className="project" ref={projectRef} >
       <div className="project__photos">
-        {
+        {/* {
           imgPath.map((img, index) => 
             <img src={require('../../assets/img/insta 1.png')} alt={`${name} ${index+1}`} className={`project__photo project__photo--${index+1}`} key={`${name} ${index+1}`} />
           )
-        }
+        } */}
+        <video
+          poster={require('../../assets/img/insta 3.png')}
+          className={`project__photo project__photo--1`}
+          ref={videoRef}
+          controls
+          controlsList='nodownload'
+          loop
+          muted
+        >
+          <source src={require('../../assets/Instagram.webm')} type='video/webm' />
+          Sorry, your browser doesn't support embedded videos.
+        </video>
       </div>
 
       <div className="project__details">
