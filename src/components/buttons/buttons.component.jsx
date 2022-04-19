@@ -27,7 +27,7 @@ export const BtnTertiary = ({children, route}) => {
 
 export const BtnSubmit = ({ children }) => {
   return (
-    <button type='submit' onClick={(e) => e.preventDefault()} className='btn btn__secondary'>
+    <button type='submit' className='btn btn__secondary'>
       {children}
     </button>
   )
