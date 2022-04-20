@@ -73,7 +73,7 @@
 
   &__photo{
     width: 100%;
-    opacity: 95%;
+    filter: brightness(.9);
     // z-index: 5;
     // cursor: pointer;
     border-radius: 2px;
@@ -163,7 +163,7 @@
 
   &__description {
     font-size: 1.6rem;
-    line-height: 2.2rem;
+    line-height: 2.4rem;
     text-align: justify;
     color: var(--color-grey-light);
   }
