@@ -2,7 +2,7 @@
   // font-size: 8rem;
   // line-height: 10rem;
   // letter-spacing: .1rem;
-  text-transform: capitalize;
+  // text-transform: capitalize;
 
   font-size: 7rem;
   line-height: 8rem;
@@ -37,6 +37,19 @@
       font-size: 1.6rem;
       line-height: 4rem;
     }
+  }
+
+  .text {
+    // display: inline-block;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: all 1s ease-in;
+    // white-space: pre;
+  }
+    
+  .fade {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

@@ -1,18 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './header.styles.scss'
 
 import Navigation from '../nav/nav.component'
 import { H1 } from '../typography/typography.component'
 import SocialMedia from '../socialMedia/socialMedia.component'
 import { useParallax } from 'react-scroll-parallax';
+import fadeIn from '../../animations/fadeIn'
 
 const Header = () => {
   const parallax = useParallax({ speed: 12 })
   const parallaxImg = useParallax({
     speed: -18,
-    // scale: [1.05, 1, 'easeOutCubic'],
-    translate: [0, 0]
-})
+    translate: [0, 0],
+  })
+
+  useEffect(() => {
+    fadeIn()
+  }, [])
 
   return (
     <header className='header'>
@@ -23,10 +27,35 @@ const Header = () => {
       <div className="header__text" ref={parallax.ref}>
         <H1>
           <p className='heading1--sub' >
-            Hola!! Humans of Internet 
+            {
+              'Hola!! Humans of Internet'.split('').map((word, index) => {
+                return <span className='text' key={index+1} >{word}</span>
+              })
+            } 
           </p>
-          Myself <span className="highlight">Aditya</span>,&nbsp; <br/>
-          I&rsquo;m Freelance Developer 
+          {
+            'Myself'.split('').map((word, index) => {
+              return <span className='text' key={word + index + 1} >{word}</span>
+            })
+          } {
+            'Aditya,'.split('').map((word, index) => {
+              if (word === ',') {
+                return <span className='text' key={word + index + 1} >{word}</span>  
+              } else {
+                return <span className='highlight text' key={word + index + 1} >{word}</span>
+              }
+            })
+          } <br />
+          {
+            "I'm Freelance Developer".split('').map((word, index) => {
+              // if (word === ' ') {
+              //   return <>&nbsp;</>
+              // } else {
+              //   return <span className='text' key={word + index + 1} >{word}</span>
+              // }
+              return <span className='text' key={word + index + 1} >{word}</span>
+            })
+          } 
           {/* I&rsquo;m Freelance Developer&nbsp;<br/>
           Turning Ideas Into <br/> Reality  */}
         </H1>
