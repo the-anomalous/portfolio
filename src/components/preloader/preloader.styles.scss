@@ -1,0 +1,105 @@
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-secondary);
+  z-index: 99999;
+  color: var(--color-primary);
+  font-weight: 400;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 22rem;
+    width: 50rem;
+
+    transition: opacity .4s ease .5s;
+  }
+
+  &__year {
+    display: inline-block;
+    font-size: 6.4rem;
+    margin-top: auto;
+
+    animation: fadeIn 800ms;
+  }
+
+  &__text {
+    display: inline-block;
+    font-size: 2.8rem;
+    margin: auto;
+    text-transform: capitalize;
+
+    animation: fadeIn 800ms;
+  }
+
+  &__progress-bar {
+    max-width: 25%;
+    background-color: var(--color-primary);
+    height: 2px;
+    // width: 100%;
+    border-radius: 1rem;
+  }
+
+  progress::-webkit-progress-bar {
+    background-color: transparent;
+  }
+
+  progress::-webkit-progress-value {
+    background-color: var(--color-primary) !important;
+  }
+
+
+  /* For Firefox */
+  progress {
+    background-color: transparent;
+  }
+
+  progress::-moz-progress-bar {
+    background-color: var(--color-primary) !important;
+  }
+
+  &__welcome {
+    position: absolute;
+    text-transform: capitalize;
+    font-size: 4rem;
+
+    transition: opacity .5s ease 1s;
+  }
+
+  &__hide {
+    opacity: 0;
+  }
+
+  &__show {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+
+  60% {
+    opacity: .3;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

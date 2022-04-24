@@ -1,12 +1,12 @@
 import React, { useRef, useEffect } from 'react'
-import './form.styles.scss'
+import './contact.styles.scss'
 
 import { useForm, ValidationError } from '@formspree/react';
 import { H2 } from '../typography/typography.component'
 import { BtnSubmit } from '../buttons/buttons.component'
 import appearOnScroll from '../../observers/appearOnScroll.observer'
 
-const Form = () => {
+const Contact = () => {
   const [state, handleSubmit] = useForm("mqknyjnb");
   const formRef = useRef()
   
@@ -47,7 +47,7 @@ const Form = () => {
           />
         </div>
         
-        <div className="form__group form__subject">
+        {/* <div className="form__group form__subject">
           <input type="subject" className="form__input" id='subject' name='subject' placeholder='Subject' required />
           <label htmlFor="subject" className="form__label">
             Subject
@@ -57,7 +57,7 @@ const Form = () => {
             field="subject"
             errors={state.errors}
           />
-        </div>
+        </div> */}
 
         <div className="form__group form__message">
           <textarea className="form__input form__textarea" id='messgae' name='message' placeholder='Message' required/>
@@ -73,7 +73,8 @@ const Form = () => {
         
         <div className="form__btn">
           <BtnSubmit>
-            Send Message
+            {/* Send Message */}
+            <div className="loader"></div>
           </BtnSubmit>
         </div>
       </form>
@@ -82,4 +83,4 @@ const Form = () => {
   )
 }
 
-export default Form
+export default Contact

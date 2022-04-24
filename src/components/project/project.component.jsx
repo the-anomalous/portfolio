@@ -4,6 +4,7 @@ import './project.styles.scss'
 import { H3 } from '../typography/typography.component'
 import { BtnPrimary, BtnSecondary } from '../buttons/buttons.component'
 import Icon from '../icons/icons.component'
+import Img from '../../assets/img/insta 3.png'
 
 import appearOnScroll from '../../observers/appearOnScroll.observer'
 import playOnFocus from '../../observers/playOnFocus.observer'
@@ -27,7 +28,7 @@ const Project = ({details}) => {
           )
         } */}
         <video
-          poster={require('../../assets/img/insta 3.png')}
+          poster={Img}
           className={`project__photo project__photo--1`}
           ref={videoRef}
           controls

@@ -19,7 +19,7 @@ const Header = () => {
   }, [])
 
   return (
-    <header className='header'>
+    <header className='header' onLoad={() => console.log('loaded')}>
       <Navigation />
 
       <div className="header__img" ref={parallaxImg.ref}/>

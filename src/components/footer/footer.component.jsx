@@ -13,12 +13,10 @@ const Footer = () => {
         </a>
       </figure>
       <p className='footer__text'>
-        designed and developed by aditya musale
+        designed and developed by aditya musale <br/>
+        <span className="footer__email">adityamusale4477@gmail.com</span>  
       </p>
       <SocialMedia className='footer__social' />
-      {/* <p className="footer__email">
-        adityamusale4477@gmail.com
-      </p> */}
     </footer>
   )
 }

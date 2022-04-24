@@ -1,13 +1,19 @@
+import { lazy, Suspense } from 'react';
 import './App.scss';
-import HomePage from './pages/home/home.page'
+// import HomePage from './pages/home/home.page'
+import Preloader from './components/preloader/preloader.component'
+const HomePage = lazy(() => import('./pages/home/home.page'))
 
-function App() {
-  console.log("👀 Looking for Something ? 👀");
-  
+const App = () => {
+  // console.log("👀 Looking for Something ? 👀"); 
+
   return (
-    <div className="App">
-      <HomePage /> 
-    </div>
+    <Suspense fallback={ <Preloader/> } >
+      <div className="App" onCanPlay={(e) => console.log(e)} >
+        <HomePage />
+      </div>
+    </Suspense>
+    // <Preloader/>
   );
 }
 

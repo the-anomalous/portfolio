@@ -4,7 +4,7 @@ import './home.styles.scss'
 import Header from '../../components/header/header.component'
 import About from '../../components/about/about.component'
 import Work from '../../components/work/work.component'
-import Form from '../../components/form/form.component'
+import Contact from '../../components/contact/contact.component'
 import Footer from '../../components/footer/footer.component'
 
 const HomePage = () => {
@@ -13,7 +13,7 @@ const HomePage = () => {
       <Header />
       <About />
       <Work />
-      <Form />
+      <Contact />
       <Footer/>
     </>
   )
