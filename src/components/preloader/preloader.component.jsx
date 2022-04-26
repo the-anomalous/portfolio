@@ -2,10 +2,10 @@ import { useState, useEffect, useRef } from 'react'
 import './preloader.styles.scss'
 
 
-const Preloader = () => {
+const Preloader = ({loading}) => {
   const [currentYear, setYear] = useState(2003)
   const [toggle, setToggle] = useState(false) 
-
+  
   const textRef = useRef('i was born')
   const widthRef = useRef(0)
 
@@ -13,18 +13,22 @@ const Preloader = () => {
     const complete = () => {
       clearInterval(timer)
     }
-    
+  
     const changeYear = () => {
       widthRef.current = widthRef.current + 1
 
       setYear((previousYear) => {
         switch (previousYear) {
+          case 2004: 
+            return previousYear + 4
           case 2008:
             textRef.current = 'graduated from 1st grade'
             return previousYear + 1;
           case 2010:
             textRef.current = 'india lifts the world cup'
             return previousYear + 1;
+          case 2011:
+            return previousYear + 7;
           case 2018: 
             textRef.current = 'started programming'
             return previousYear + 1;
@@ -45,24 +49,27 @@ const Preloader = () => {
       })
     }
 
-    const timer = setInterval(changeYear, 500)
+    let timer = null
+    setTimeout(() => {
+      timer = setInterval(changeYear, 400)
+    }, 700)
   }, [])
 
   return (
-    <div className='preloader'>
-      <div className={`preloader__box ${toggle && 'preloader__hide'}`}>
+    <div className={`preloader ${toggle && 'preloader--hide'}`}>
+      <div className={`preloader__box ${toggle && 'preloader__box--hide'}`}>
         <span className="preloader__year">    
           {currentYear}
         </span>
 
-        <progress className="preloader__progress-bar" value={widthRef.current} max={19}/>
+        <progress className="preloader__progress-bar" value={widthRef.current} max={10}/>
 
         <span className="preloader__text">
           {textRef.current}
         </span>
       </div>
 
-      <div className={`preloader__welcome ${!toggle && 'preloader__hide'}`}>
+      <div className={`preloader__welcome ${!toggle && 'preloader__welcome--hide'}`}>
         welcome
       </div>
     </div>

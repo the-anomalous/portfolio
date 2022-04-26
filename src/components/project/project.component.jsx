@@ -34,9 +34,10 @@ const Project = ({details}) => {
           controls
           controlsList='nodownload'
           loop
-          muted
+          muted 
         >
-          <source src={require('../../assets/Instagram.webm')} type='video/webm' />
+          {/* <source src={require('../../assets/Instagram.webm')} type='video/webm' /> */}
+          <source src={'https://ik.imagekit.io/ml22hal4lxj/video/game-of-life_eJsDVP20_TnX2fOaeu.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1650816580377'} type='video/mp4' />
           Sorry, your browser doesn't support embedded videos.
         </video>
       </div>

@@ -13,9 +13,7 @@ const Contact = () => {
   useEffect(() => {
     appearOnScroll.observe(formRef.current)
   }, [formRef])
-
-  console.log(state);
-
+  
   return (
     <section className='contact' id='contact' ref={formRef} >
       <H2>
@@ -48,7 +46,7 @@ const Contact = () => {
         </div>
         
         {/* <div className="form__group form__subject">
-          <input type="subject" className="form__input" id='subject' name='subject' placeholder='Subject' required />
+          <input type="subject" className="form__input" id='subject' name='subject' placeholder='Subject' value={state.succeded && ''} required />
           <label htmlFor="subject" className="form__label">
             Subject
           </label>
@@ -72,9 +70,14 @@ const Contact = () => {
         </div>
         
         <div className="form__btn">
-          <BtnSubmit>
-            {/* Send Message */}
-            <div className="loader"></div>
+          <BtnSubmit className='form__submit'>
+            {
+              state.submitting && <>sending <div className="loader"></div></> 
+            } {
+              state.succeeded && 'sent'
+            } {
+              !state.submitting && !state.succeeded ? 'send message' : null
+            }
           </BtnSubmit>
         </div>
       </form>
