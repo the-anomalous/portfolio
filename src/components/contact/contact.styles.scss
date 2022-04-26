@@ -11,24 +11,31 @@
   .heading2{
     margin-bottom: 6rem;
   }
-
+  
+  &__error {
+    margin: 3rem auto;
+    text-align: center;
+    font-weight: 600;
+    color: var(--color-secondary);
+  }
+  
   .form {
     display: grid;
     grid-template-columns: 1fr repeat(2, 25rem) 1fr;
     column-gap: 3rem;
     row-gap: 5rem;
-
+    
     @media only screen and (max-width: 31.25em) {
       display: flex;
       flex-direction: column;
     }
-    
+  
     &__name {
-      grid-column: 2 / 4;
+      grid-column: 2 / 3;
     }
 
     &__email {
-      grid-column: 2 /4 ;
+      grid-column: 3 /4 ;
     }
 
     &__subject, &__message, &__btn {
