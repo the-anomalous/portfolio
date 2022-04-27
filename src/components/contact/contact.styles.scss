@@ -124,7 +124,7 @@
     }
 
     &__submit {
-      width: 17rem;
+      width: 16rem;
     }
     
     .loader,
@@ -135,8 +135,8 @@
       height: 2.5em;
       -webkit-animation-fill-mode: both;
       animation-fill-mode: both;
-      -webkit-animation: load7 1.8s infinite ease-in-out;
-      animation: load7 1.8s infinite ease-in-out;
+      -webkit-animation: loader 1.8s infinite ease-in-out;
+      animation: loader 1.8s infinite ease-in-out;
     }
     
     .loader {
@@ -172,7 +172,7 @@
   }
 }
 
-@-webkit-keyframes load7 {
+@-webkit-keyframes loader {
   0%,
   80%,
   100% {
@@ -184,7 +184,7 @@
   }
 }
 
-@keyframes load7 {
+@keyframes loader {
   0%,
   80%,
   100% {

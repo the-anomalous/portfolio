@@ -25,9 +25,9 @@ export const BtnTertiary = ({children, route}) => {
   )
 }
 
-export const BtnSubmit = ({ children }) => {
+export const BtnSubmit = ({ children, className }) => {
   return (
-    <button type='submit' className='btn btn__secondary'>
+    <button type='submit' className={`btn btn__secondary ${className}`}>
       {children}
     </button>
   )

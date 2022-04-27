@@ -29,6 +29,16 @@ const Contact = () => {
     } )
   }
 
+  const clearForm = () => {
+    setResolving(() => false)
+    setInfo({
+      name: "",
+      email: "",
+      subject: "",
+      message: ""
+    })
+  }
+
   const onSubmit = e => {
     e.preventDefault()
     setResolving(true)
@@ -39,24 +49,13 @@ const Contact = () => {
       from_name: info.name,
       message: info.message,
       reply_to: info.email,
-    }, 'Eu5KMOJaMhO3jfCFn').then((response) => {
-      setResolving(() => false)
-      setInfo({
-        name: "",
-        email: "",
-        subject: "",
-        message: ""
-      })
+    }, 'Eu5KMOJaMhO3jfCFn')
+      .then(() => {
+      clearForm()
       setSuccess(() => true)
       setTimeout(() => setSuccess(false), 1800)
-    }).catch((err) => {
-      setResolving(() => false)
-      setInfo({
-        name: "",
-        email: "",
-        subject: "",
-        message: ""
-      })
+    }).catch(() => {
+      clearForm()
       setError(() => '*Could not submit the form')
       setTimeout(() => setError(''), 1800)
     })

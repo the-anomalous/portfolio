@@ -4,13 +4,13 @@ import './project.styles.scss'
 import { H3 } from '../typography/typography.component'
 import { BtnPrimary, BtnSecondary } from '../buttons/buttons.component'
 import Icon from '../icons/icons.component'
-import Img from '../../assets/img/insta 3.png'
+// import Img from '../../assets/img/insta 3.jpg
 
 import appearOnScroll from '../../observers/appearOnScroll.observer'
 import playOnFocus from '../../observers/playOnFocus.observer'
 
 const Project = ({details}) => {
-  const {name, description, technologies, appLink, githubLink } = details
+  const { name, description, technologies, appLink, githubLink, imgPath, videoPath } = details
   const projectRef = useRef()
   const videoRef = useRef()
 
@@ -22,13 +22,8 @@ const Project = ({details}) => {
   return (
     <div className="project" ref={projectRef} >
       <div className="project__photos">
-        {/* {
-          imgPath.map((img, index) => 
-            <img src={require('../../assets/img/insta 1.png')} alt={`${name} ${index+1}`} className={`project__photo project__photo--${index+1}`} key={`${name} ${index+1}`} />
-          )
-        } */}
         <video
-          poster={Img}
+          poster={imgPath}
           className={`project__photo project__photo--1`}
           ref={videoRef}
           controls
@@ -36,8 +31,8 @@ const Project = ({details}) => {
           loop
           muted 
         >
-          {/* <source src={require('../../assets/Instagram.webm')} type='video/webm' /> */}
-          <source src={'https://ik.imagekit.io/ml22hal4lxj/video/game-of-life_eJsDVP20_TnX2fOaeu.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1650816580377'} type='video/mp4' />
+          <source src={videoPath[0]} type='video/mp4' />
+          <source src={videoPath[1]} type='video/webm' />
           Sorry, your browser doesn't support embedded videos.
         </video>
       </div>
