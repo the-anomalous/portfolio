@@ -1,15 +1,15 @@
 import React from 'react'
 import './nav.styles.scss'
 
-import { ReactComponent as Logo } from '../../assets/logo.svg'
 import Menu from '../menu/menu.component'
+import Icon from '../icons/icons.component'
 
 const Navigation = () => {
   return (
     <nav className="nav">
       <figure className="nav__logo">
         <a href="#home">
-          <Logo className='nav__img'/>
+          <Icon className='nav__img' name='logo' />
         </a>
       </figure> 
 
@@ -26,7 +26,7 @@ const Navigation = () => {
           <a href="#contact" className='link' >Contact</a>
         </li>
         <li className="nav__links__item">
-          <a href="#resume" className='link'>Resume</a>
+          <a href="./../../assets/Resume.pdf" className='link' target='_blank' type='application/pdf' >Resume</a>
         </li>
       </ul>
     </nav>

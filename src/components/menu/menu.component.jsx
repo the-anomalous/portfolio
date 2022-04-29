@@ -31,9 +31,9 @@ const Menu = () => {
           <li className={`menu__link menu__link--contact ${toggle ? 'menu__link--active' : ''}`}>
             <a href="#contact" className='link' onClick={() => setToggle(!toggle)}>Contact</a>
           </li>
-          <li className={`menu__link menu__link--resume ${toggle ? 'menu__link--active' : ''}`}>
+          {/* <li className={`menu__link menu__link--resume ${toggle ? 'menu__link--active' : ''}`}>
             <a href="#resume" className='link' onClick={() => setToggle(!toggle)}>Resume</a>
-          </li>
+          </li> */}
         </ul>
 
         <div className="menu__contact">

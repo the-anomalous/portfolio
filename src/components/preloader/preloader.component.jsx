@@ -22,7 +22,7 @@ const Preloader = ({loading}) => {
           case 2004: 
             return previousYear + 4
           case 2008:
-            textRef.current = 'graduated from 1st grade'
+            textRef.current = 'got my first PC'
             return previousYear + 1;
           case 2010:
             textRef.current = 'india lifts the world cup'
