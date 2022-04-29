@@ -3,6 +3,7 @@ import './nav.styles.scss'
 
 import Menu from '../menu/menu.component'
 import Icon from '../icons/icons.component'
+import Pdf from '../../assets/resume.pdf'
 
 const Navigation = () => {
   return (
@@ -26,7 +27,7 @@ const Navigation = () => {
           <a href="#contact" className='link' >Contact</a>
         </li>
         <li className="nav__links__item">
-          <a href="./../../assets/Resume.pdf" className='link' target='_blank' type='application/pdf' >Resume</a>
+          <a href={Pdf} className='link' target='_blank' rel="noreferrer" type='application/pdf' >Resume</a>
         </li>
       </ul>
     </nav>
