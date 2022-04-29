@@ -8,6 +8,10 @@
   display: flex;
   flex-direction: column;
 
+  @media only screen and (max-width: 31.25em) {
+    height: 86vh;
+  }
+
   &__img {
     position: absolute;
     top: -1rem;
