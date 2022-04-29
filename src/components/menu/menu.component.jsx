@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import './menu.styles.scss'
 import Icon from '../icons/icons.component'
 import SocialMedia from '../socialMedia/socialMedia.component'
+import Pdf from '../../assets/resume.pdf'
 
 const Menu = () => {
   const [toggle, setToggle] = useState(false)
@@ -31,9 +32,9 @@ const Menu = () => {
           <li className={`menu__link menu__link--contact ${toggle ? 'menu__link--active' : ''}`}>
             <a href="#contact" className='link' onClick={() => setToggle(!toggle)}>Contact</a>
           </li>
-          {/* <li className={`menu__link menu__link--resume ${toggle ? 'menu__link--active' : ''}`}>
-            <a href="#resume" className='link' onClick={() => setToggle(!toggle)}>Resume</a>
-          </li> */}
+          <li className={`menu__link menu__link--resume ${toggle ? 'menu__link--active' : ''}`}>
+            <a href={Pdf} className='link' target='_blank' onClick={() => setToggle(!toggle)} rel="noreferrer">Resume</a>
+          </li>
         </ul>
 
         <div className="menu__contact">
