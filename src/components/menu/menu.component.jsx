@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import './menu.styles.scss'
 import Icon from '../icons/icons.component'
 import SocialMedia from '../socialMedia/socialMedia.component'
-import Pdf from '../../assets/resume.pdf'
 
 const Menu = () => {
   const [isMenuActive, setIsMenuActive] = useState(false)
@@ -43,7 +42,7 @@ const Menu = () => {
           </li>
           <li className={`menu__link menu__link--resume ${isMenuActive && 'menu__link--active'}`}>
             <a
-              href={Pdf}
+              href={'https://drive.google.com/file/d/1f5oPkBmW5fPVi4odnIi_90RcC-xQdCji/view?usp=sharing'}
               className='link'
               target='_blank'
               rel="noreferrer"
