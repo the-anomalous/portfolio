@@ -166,6 +166,10 @@
     line-height: 2.4rem;
     text-align: justify;
     color: var(--color-grey-light);
+
+    @media only screen and (max-width: 31.25em) {
+      font-size: 1.7rem;
+    }
   }
 
   &__buttons{
