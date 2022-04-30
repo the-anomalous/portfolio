@@ -33,6 +33,10 @@
 
     transition: opacity .4s ease .5s;
 
+    @media only screen and (max-width: 31.25em) {
+      margin-bottom: 4rem;
+    }
+
     &--hide {
       opacity: 0;
     }
