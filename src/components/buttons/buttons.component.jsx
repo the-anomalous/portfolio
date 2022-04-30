@@ -3,7 +3,11 @@ import './buttons.styles.scss'
 
 export const BtnPrimary = ({children, className, link}) => {
   return (
-    <a className={`btn btn__primary ${className}`} target='_blank' rel="noreferrer" href={link}>
+    <a
+      href={link}
+      className={`btn btn__primary ${className}`}
+      target='_blank'
+      rel="noreferrer" >
       {children}
     </a>
   )
@@ -11,15 +15,11 @@ export const BtnPrimary = ({children, className, link}) => {
 
 export const BtnSecondary = ({children, className, link}) => {
   return (
-    <a className={`btn btn__secondary ${className}`} target='_blank' rel="noreferrer" href={link}>
-      {children}
-    </a>
-  )
-}
-
-export const BtnTertiary = ({children, route}) => {
-  return (
-    <a className='btn btn__tertiary' href={route}>
+    <a
+      href={link}
+      className={`btn btn__secondary ${className}`}
+      target='_blank'
+      rel="noreferrer">
       {children}
     </a>
   )
@@ -27,7 +27,9 @@ export const BtnTertiary = ({children, route}) => {
 
 export const BtnSubmit = ({ children, className }) => {
   return (
-    <button type='submit' className={`btn btn__secondary ${className}`}>
+    <button
+      type='submit'
+      className={`btn btn__secondary ${className}`}>
       {children}
     </button>
   )

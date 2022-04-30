@@ -27,7 +27,7 @@ const Navigation = () => {
           <a href="#contact" className='link' >Contact</a>
         </li>
         <li className="nav__links__item">
-          <a href={Pdf} className='link' target='_blank' rel="noreferrer" type='application/pdf' >Resume</a>
+          <a href={Pdf} className='link' target='_blank' rel="noreferrer">Resume</a>
         </li>
       </ul>
     </nav>

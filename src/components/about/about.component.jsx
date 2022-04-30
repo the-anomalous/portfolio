@@ -13,7 +13,6 @@ const About = () => {
     appearOnScroll.observe(aboutRef.current)
   }, [aboutRef])
   
-
   return (
     <section className='about' id='about' ref={aboutRef}>
       <H2>
@@ -50,7 +49,9 @@ const About = () => {
             <Icon
               className={`about__icon about__icons--${index + 1}`}
               key={name}
-              name={name} />)
+              name={name}
+            />
+          )
         }
       </div>
     </section>

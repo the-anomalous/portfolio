@@ -4,7 +4,6 @@ import './project.styles.scss'
 import { H3 } from '../typography/typography.component'
 import { BtnPrimary, BtnSecondary } from '../buttons/buttons.component'
 import Icon from '../icons/icons.component'
-// import Img from '../../assets/img/insta 3.jpg
 
 import appearOnScroll from '../../observers/appearOnScroll.observer'
 import playOnFocus from '../../observers/playOnFocus.observer'
@@ -54,9 +53,6 @@ const Project = ({details}) => {
         <div className="project__description">
           <p>
             {description}
-            {/* <BtnTertiary route={route} >
-              read more
-            </BtnTertiary> */}
           </p>
         </div>
 

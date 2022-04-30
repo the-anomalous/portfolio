@@ -1,12 +1,13 @@
 .header{
-  height: 94vh; 
-  max-width: 100%;
-  margin: 0;
-  padding-top: 0;
   position: relative;
   
   display: flex;
   flex-direction: column;
+
+  height: 94vh; 
+  max-width: 100%;
+  margin: 0;
+  padding-top: 0;
 
   @media only screen and (max-width: 31.25em) {
     height: 86vh;
@@ -29,7 +30,6 @@
     @media only screen and (max-width: 31.25em) {
       background-position: -10rem 36%;
     }
-
   }
 
   .heading1 {
@@ -38,62 +38,59 @@
     }
   }
 
-  &__text{
+  &__text { 
     max-width: var(--max-width);
-    // margin: auto;
-
     margin-top: auto;
     margin-bottom: 3rem;
   }
 
   &__social {
-  position: fixed;
-  bottom: 0;
-  right: 4rem;
+    position: fixed;
+    bottom: 0;
+    right: 4rem;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  
-  height: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    height: 55%;
 
-  @media only screen and (max-width: 43.75em) {
-    display: none;
+    @media only screen and (max-width: 43.75em) {
+      display: none;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 16rem;
+      background-color: var(--color-white);
+    }
+
+    &_link {
+      fill: var(--color-white);
+      height: 2rem;
+      width: 2rem;
+
+      transition: all .1s;
+      
+      &--twitter{
+        stroke: var(--color-white);
+      }
+      
+      &:hover {
+        transform: translateY(-1.5px);
+        fill: var(--color-secondary);
+      }
+      
+      &--twitter:hover {
+        stroke: var(--color-secondary);
+      }
+
+      &:active {
+        transform: translateY(1.6px);
+      }
+    }
   }
-
-  &::after {
-    content: '';
-    display: block;
-    width: 2px;
-    height: 16rem;
-    background-color: var(--color-white);
-  }
-
-  &_link {
-    fill: var(--color-white);
-    height: 2rem;
-    width: 2rem;
-
-    transition: all .1s;
-    
-    &--twitter{
-      stroke: var(--color-white);
-    }
-    
-    &:hover {
-      transform: translateY(-1.5px);
-      fill: var(--color-secondary);
-    }
-    
-    &--twitter:hover {
-      stroke: var(--color-secondary);
-    }
-
-    &:active {
-      transform: translateY(1.6px);
-    }
-    
-  }
-}
 } 

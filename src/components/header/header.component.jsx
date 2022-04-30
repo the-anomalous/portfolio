@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import './header.styles.scss'
 
 import Navigation from '../nav/nav.component'
 import { H1 } from '../typography/typography.component'
 import SocialMedia from '../socialMedia/socialMedia.component'
 import { useParallax } from 'react-scroll-parallax';
+
 import fadeIn from '../../animations/fadeIn'
 
 const Header = () => {
@@ -48,16 +49,9 @@ const Header = () => {
           } <br />
           {
             "I'm Freelance Developer".split('').map((word, index) => {
-              // if (word === ' ') {
-              //   return <>&nbsp;</>
-              // } else {
-              //   return <span className='text' key={word + index + 1} >{word}</span>
-              // }
               return <span className='text' key={word + index + 1} >{word}</span>
             })
           } 
-          {/* I&rsquo;m Freelance Developer&nbsp;<br/>
-          Turning Ideas Into <br/> Reality  */}
         </H1>
       </div>
 

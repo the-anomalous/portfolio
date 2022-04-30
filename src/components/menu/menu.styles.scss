@@ -13,8 +13,8 @@
   &__open {
     height: 4rem;
     width: 3rem;
-    cursor: pointer;
     z-index: 100;
+    cursor: pointer;
     
     &--icon {
       fill: var(--color-white);
@@ -30,10 +30,10 @@
 
     height: 5rem;
     width: 5rem;
-    cursor: pointer;
     margin: 1rem;
     margin-left: auto;
     margin-top: 1.2rem;
+    cursor: pointer;
     
     &--icon {
       fill: var(--color-primary);
@@ -48,10 +48,10 @@
     right: 3.2rem;
 
     background-color: var(--color-secondary);
-    width: 0;
-    height: 0;
     border-radius: 50%;
     z-index: -1;
+    width: 0;
+    height: 0;
 
     transition: all 1s;
 
@@ -141,15 +141,15 @@
       
       &::after {
         content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
         display: inline-block;
         height: 3px;
         width: 0;
         background-color: currentColor;
         
-        position: absolute;
-        bottom: 0;
-        left: 0;
-
         transition: all .2s linear;
       }
 
@@ -165,7 +165,6 @@
     }
   }
 
-
   &__contact {
     display: flex;
     flex-direction: column;
@@ -174,8 +173,8 @@
     margin-top: auto;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
     padding: 0 2rem;
+    width: 50%;
     transform: translateY(-4rem);
   
     @media only screen and (max-width: 31.25em) {
@@ -187,7 +186,6 @@
     display: flex;
     justify-content: space-evenly;
     
-
     &_link {
       height: 4rem;
       width: 4rem;

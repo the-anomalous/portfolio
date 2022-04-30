@@ -1,0 +1,138 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, 25rem) 1fr;
+  column-gap: 3rem;
+  row-gap: 5rem;
+
+  @media only screen and (max-width: 31.25em) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__error {
+    margin: 3rem auto;
+    text-align: center;
+    font-weight: 600;
+    color: var(--color-secondary);
+  }
+  
+  &__name {
+    grid-column: 2 / 3;
+  }
+
+  &__email {
+    grid-column: 3 /4;
+  }
+
+  &__subject,
+  &__message,
+  &__btn {
+    grid-column: 2 /4;
+  }
+
+  &__group {
+    position: relative;
+  }
+
+  &__input {
+    height: 5.4rem;
+    width: 100%;
+    padding: 2rem;
+    color: var(--color-white);
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    background-color: #2b2b2b;
+    font-size: 1.6rem;
+    font-family: 'Lato', 'sans-serif';
+    font-weight: 400;
+
+    &::placeholder {
+      color: var(--color-grey);
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      height: 3px;
+      width: 100%;
+      background-color: var(--color-white);
+      z-index: 10;
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      transition: all .2s linear;
+    }
+  }
+
+  &__textarea {
+    height: 13rem;
+  }
+
+  &__label {
+    position: absolute;
+    top: -2.5rem;
+    left: 1rem;
+
+    font-size: 1.5rem;
+    opacity: 1;
+
+    transition: all .25s linear;
+  }
+
+  &__input:placeholder-shown~.form__label {
+    z-index: -1;
+    top: 1rem;
+    left: 1rem;
+    opacity: 0;
+  }
+
+  &__submit {
+    width: 16rem;
+  }
+
+  .loader,
+  .loader:before,
+  .loader:after {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation: loader 1.8s infinite ease-in-out;
+    animation: loader 1.8s infinite ease-in-out;
+  }
+
+  .loader {
+    color: var(--color-secondary);
+    font-size: 3px;
+    margin: auto;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+    top: -6px;
+  }
+
+  .loader:before,
+  .loader:after {
+    content: '';
+    position: absolute;
+    top: 0;
+  }
+
+  .loader:before {
+    left: -3.5em;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+
+  .loader:after {
+    left: 3.5em;
+  }
+}

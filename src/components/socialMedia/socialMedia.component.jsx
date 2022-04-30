@@ -10,7 +10,12 @@ const SocialMedia = ({className}) => {
     <div className={className} >
       {
         socialIcons.map(({ name, link }) =>
-          <a href={link} className={`${className}_link ${className}_link--${name}`} target='_blank' rel="noreferrer" key={name}>
+          <a
+            href={link}
+            target='_blank'
+            rel="noreferrer"
+            className={`${className}_link ${className}_link--${name}`}
+            key={name}>
             <Icon className='icon' name={name} />
           </a>
         )
