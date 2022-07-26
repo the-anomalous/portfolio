@@ -4,17 +4,10 @@ import './header.styles.scss'
 import Navigation from '../nav/nav.component'
 import { H1 } from '../typography/typography.component'
 import SocialMedia from '../socialMedia/socialMedia.component'
-import { useParallax } from 'react-scroll-parallax';
 
 import fadeIn from '../../animations/fadeIn'
 
 const Header = () => {
-  const parallax = useParallax({ speed: 12 })
-  const parallaxImg = useParallax({
-    speed: -18,
-    translate: [0, 0],
-  })
-
   useEffect(() => {
     fadeIn()
   }, [])
@@ -23,9 +16,9 @@ const Header = () => {
     <header className='header' id='home' >
       <Navigation />
 
-      <div className="header__img" ref={parallaxImg.ref}/>
-
-      <div className="header__text" ref={parallax.ref}>
+      <div className="header__img" />
+  
+      <div className="header__text">
         <H1>
           <p className='heading1--sub' >
             {
