@@ -1,13 +1,6 @@
 .work{
-  opacity: 0;
-  transform: translateY(4rem);
-  transition: all .4s ease-in;
-
-  &.appear {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
+  @include appearOnScroll(4rem);
+  
   .heading2{
     margin-bottom: 3rem;
 

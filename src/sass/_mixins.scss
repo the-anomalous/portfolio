@@ -2,11 +2,11 @@
   opacity: 0;
   transform: translateY($transformVal);
   
-  transition: all .5s ease-in;
-  transition-delay: .4s;
+  transition: all .4s ease-in;
+  transition-delay: .2s;
   
   &.appear {
-    transform: translateY(0);
+    transform: translateY(-1.5rem);
     opacity: 1;
   }
 }
