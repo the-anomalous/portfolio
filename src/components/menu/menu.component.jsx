@@ -10,8 +10,12 @@ const Menu = () => {
   return (
     <div className='menu' >
       <div className='menu__btn' onClick={() => setIsMenuActive(!isMenuActive)}>
-        <figure className='menu__open'>
+        <figure className={`menu__open ${isMenuActive && 'menu__open--active'} `} >
           <Icon name='open' className='menu__open--icon' />
+        </figure>
+
+        <figure className={`menu__close ${isMenuActive && 'menu__close--active'} `} >
+          <Icon name='close' className='menu__close--icon' />
         </figure>
       </div>
 
@@ -19,10 +23,6 @@ const Menu = () => {
       </div>
 
       <div className={`menu__bar ${isMenuActive && 'menu__bar--active'}`}>
-        <figure className="menu__close" onClick={() => setIsMenuActive(!isMenuActive)}>
-          <Icon name='close' className='menu__close--icon' />
-        </figure>
-
         <ul className="menu__items">
           <li className={`menu__link menu__link--about ${isMenuActive && 'menu__link--active'}`}>
             <a
