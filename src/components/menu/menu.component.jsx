@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-import './menu.styles.scss'
 import Icon from '../icons/icons.component'
 import SocialMedia from '../socialMedia/socialMedia.component'
 

@@ -1,0 +1,12 @@
+@mixin appearOnScroll($transformVal) {
+  opacity: 0;
+  transform: translateY($transformVal);
+  
+  transition: all .5s ease-in;
+  transition-delay: .4s;
+  
+  &.appear {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react'
-import './about.styles.scss'
 
 import { H2 } from '../typography/typography.component'
 import Icon from '../icons/icons.component'

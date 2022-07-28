@@ -1,5 +1,4 @@
 import React from 'react'
-import './socialMedia.styles.scss'
 
 import { socialIcons } from '../../assets/data'
 import Icon from '../icons/icons.component'

@@ -1,5 +1,4 @@
 import React from 'react'
-import './footer.styles.scss'
 
 import SocialMedia from '../socialMedia/socialMedia.component'
 import Icon from '../icons/icons.component'

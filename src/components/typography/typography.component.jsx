@@ -1,5 +1,4 @@
 import React from 'react'
-import './typography.styles.scss'
 
 export const H1 = ({children, className}) => {
   return (

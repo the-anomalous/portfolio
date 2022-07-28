@@ -1,7 +1,7 @@
 const options = {
   root: null,
   threshold: 0,
-  rootMargin: '0px 0px -50px 0px'
+  rootMargin: '0px 0px -140px 0px'
 };
 
 const appearOnScroll = new IntersectionObserver((entries) => {

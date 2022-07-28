@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react'
-import './project.styles.scss'
 
 import { H3 } from '../typography/typography.component'
 import { BtnPrimary, BtnSecondary } from '../buttons/buttons.component'

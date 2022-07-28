@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react'
-import './work.styles.scss'
 
 import { H2 } from '../typography/typography.component'
 import Project from '../project/project.component'

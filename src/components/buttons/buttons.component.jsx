@@ -1,5 +1,4 @@
 import React from 'react'
-import './buttons.styles.scss'
 
 export const BtnPrimary = ({children, className, link}) => {
   return (

@@ -6,8 +6,8 @@
   opacity: 0;
   transform: translateY(4rem);
 
-  transition: all .4s ease-in;
-  transition-delay: .2s;
+  transition: all .5s ease-in;
+  transition-delay: .4s;
 
   &.appear {
     transform: translateY(0);

@@ -1,5 +1,4 @@
 import React from 'react'
-import './nav.styles.scss'
 
 import Menu from '../menu/menu.component'
 import Icon from '../icons/icons.component'

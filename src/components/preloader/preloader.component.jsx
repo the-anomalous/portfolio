@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react'
-import './preloader.styles.scss'
 
 const Preloader = () => {
   const [currentYear, setCurrentYear] = useState(2003)

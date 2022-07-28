@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './form.styles.scss'
 
 import emailjs from '@emailjs/browser';
 import { BtnSubmit } from '../buttons/buttons.component'

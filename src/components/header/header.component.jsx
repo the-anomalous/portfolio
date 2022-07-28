@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import './header.styles.scss'
 
 import Navigation from '../nav/nav.component'
 import { H1 } from '../typography/typography.component'
