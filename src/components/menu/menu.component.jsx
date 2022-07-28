@@ -9,9 +9,11 @@ const Menu = () => {
 
   return (
     <div className='menu' >
-      <figure className='menu__open' onClick={() => setIsMenuActive(!isMenuActive)}>
-        <Icon name='open' className='menu__open--icon' />
-      </figure>
+      <div className='menu__btn' onClick={() => setIsMenuActive(!isMenuActive)}>
+        <figure className='menu__open'>
+          <Icon name='open' className='menu__open--icon' />
+        </figure>
+      </div>
 
       <div className={`menu__background ${isMenuActive && 'menu__background--active'} `}>
       </div>

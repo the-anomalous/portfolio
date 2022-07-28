@@ -10,14 +10,25 @@
     display: block;
   }
 
-  &__open {
-    height: 4rem;
-    width: 3rem;
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 5.2rem;
+    width: 5.2rem;
     z-index: 100;
+    background-color: var(--color-white);
+    border-radius: 50%;
     cursor: pointer;
+  }
+
+  &__open {
+    height: 60%;
+    width: 60%;
     
     &--icon {
-      fill: var(--color-white);
+      fill: var(--color-primary);
       height: 100%;
       width: 100%;
     }
