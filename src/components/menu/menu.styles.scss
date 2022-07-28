@@ -11,6 +11,10 @@
   }
 
   &__btn {
+    position: fixed;
+    top: 1.4rem;
+    right: 2rem;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,8 +28,8 @@
   }
 
   &__open {
-    height: 60%;
-    width: 60%;
+    height: 55%;
+    width: 55%;
     
     &--icon {
       fill: var(--color-primary);
