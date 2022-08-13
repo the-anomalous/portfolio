@@ -55,6 +55,11 @@ const Form = () => {
 
   return (
     <>
+      <div className="form__cta">
+        Think I’m the perfect fit for your project? <br />
+        Just send me a message!!
+      </div>
+
       <div className="form__error">
         {error}
       </div>

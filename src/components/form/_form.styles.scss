@@ -9,11 +9,22 @@
     flex-direction: column;
   }
 
+  &__cta {
+    font-size: 2rem;
+    line-height: 3rem;
+    color: var(--color-grey);
+    font-weight: 600;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+
   &__error {
     margin: 3rem auto;
     text-align: center;
     font-weight: 600;
     color: var(--color-secondary);
+    font-size: 1.8rem;
   }
   
   &__name {

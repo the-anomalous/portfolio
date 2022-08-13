@@ -12,12 +12,12 @@ export const BtnPrimary = ({children, className, link}) => {
   )
 }
 
-export const BtnSecondary = ({children, className, link}) => {
+export const BtnSecondary = ({ children, className, link, target }) => {
   return (
     <a
       href={link}
       className={`btn btn__secondary ${className}`}
-      target='_blank'
+      target={target ? target : '_blank'}
       rel="noreferrer">
       {children}
     </a>

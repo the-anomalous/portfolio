@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from 'react'
 
 import { H2 } from '../typography/typography.component'
 import Icon from '../icons/icons.component'
+import { BtnSecondary } from '../buttons/buttons.component'
+
 import appearOnScroll from '../../observers/appearOnScroll.observer'
 
 const About = () => {
@@ -34,7 +36,7 @@ const About = () => {
            I'm constantly looking for more opportunities to grow as a developer and learn from others.
         </p>
           <p>
-          That was a pretty typical intro I guess, well, in my spare time, I like listening to a podcast, or watching an anime.&nbsp;
+          That was a pretty typical intro I guess, well, in my spare time, I like listening to a podcast, and watching anime.&nbsp;
           <span className="highlight">
             I'm currently working with javascript, react.js, and firebase,&nbsp;
           </span>
@@ -52,6 +54,16 @@ const About = () => {
             />
           )
         }
+      </div>
+
+      <div className="about__cta">
+        <BtnSecondary
+          className='about__cta__btn'
+          link={'#contact'}
+          target='_self'
+        >
+          Get in touch!!
+        </BtnSecondary>
       </div>
     </section>
   )

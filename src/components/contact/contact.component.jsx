@@ -16,7 +16,8 @@ const Contact = () => {
       <H2>
         let&rsquo;s connect
       </H2>
-      <Form/>
+
+      <Form />
     </section>
   )
 }

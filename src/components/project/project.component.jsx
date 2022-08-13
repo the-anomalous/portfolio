@@ -24,10 +24,11 @@ const Project = ({details}) => {
           poster={imgPath}
           className={`project__photo project__photo--1`}
           ref={videoRef}
-          controls
           controlsList='nodownload'
+          preload='none'
+          controls
           loop
-          muted 
+          muted
         >
           <source src={videoPath[0]} type='video/mp4' />
           <source src={videoPath[1]} type='video/webm' />

@@ -4,13 +4,24 @@
   display: flex;
   flex-direction: column;
 
-  height: 94vh; 
+  height: 96vh; 
   max-width: 100%;
   margin: 0;
   padding-top: 0;
 
   @media only screen and (max-width: 31.25em) {
     height: 86vh;
+  }
+
+  &__cta {
+    display: flex;
+    margin-top: 2rem;
+
+    &__btn {
+      font-size: 1.6rem;
+      letter-spacing: 2 px;
+      font-weight: 600;
+    }
   }
 
   &__img {

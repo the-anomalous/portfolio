@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import Navigation from '../nav/nav.component'
 import { H1 } from '../typography/typography.component'
 import SocialMedia from '../socialMedia/socialMedia.component'
+import {BtnSecondary} from '../buttons/buttons.component'
 
 import fadeIn from '../../animations/fadeIn'
 
@@ -45,6 +46,14 @@ const Header = () => {
             })
           } 
         </H1>
+        <div className="header__cta"> 
+          <BtnSecondary
+            className='header__cta__btn'
+            link={'https://www.upwork.com/freelancers/~01bbf467bd897115b1'}
+          >
+            Hire Me!!
+          </BtnSecondary>
+        </div>
       </div>
 
       <SocialMedia className='header__social' />
