@@ -34,7 +34,7 @@
     transition: opacity .4s ease .5s;
 
     @media only screen and (max-width: 31.25em) {
-      margin-bottom: 6rem;
+      margin-bottom: 3rem;
     }
 
     &--hide {
@@ -55,6 +55,7 @@
     font-size: 2.8rem;
     margin: auto;
     text-transform: capitalize;
+    height: 30%;
 
     animation: fadeIn 800ms;
   }
