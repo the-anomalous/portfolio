@@ -36,12 +36,7 @@
   .text {
     opacity: 0;
     transform: translateY(6px);
-    transition: all .6s ease-in 7s;
-  }
-    
-  .fade {
-    opacity: 1;
-    transform: translateY(0);
+    transition: all .6s ease-in;
   }
 }
 

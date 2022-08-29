@@ -13,14 +13,24 @@
     height: 86vh;
   }
 
+  .fade {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   &__cta {
     display: flex;
     margin-top: 2rem;
-
-    &__btn {
+    
+    opacity: 0;
+    transform: translateY(1.2rem);
+    transition: all .6s ease-in; //7s
+    
+    &_btn {
       font-size: 1.6rem;
       letter-spacing: 2 px;
       font-weight: 600;
+
     }
   }
 

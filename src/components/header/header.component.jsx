@@ -48,7 +48,7 @@ const Header = () => {
         </H1>
         <div className="header__cta"> 
           <BtnSecondary
-            className='header__cta__btn'
+            className='header__cta_btn'
             link={'https://www.upwork.com/freelancers/~01bbf467bd897115b1'}
           >
             Hire Me!!
