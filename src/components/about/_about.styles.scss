@@ -4,7 +4,7 @@
   row-gap: 4rem;
   column-gap: 6rem;
   
-  @include appearOnScroll(4rem);
+  @include appearOnScroll(6rem);
 
   @media only screen and (max-width: 56.25em) {
     grid: min-content 1fr / 1fr;
