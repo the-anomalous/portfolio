@@ -52,16 +52,14 @@
       background-position: -10rem 36%;
     }
   }
-
-  .heading1 {
-    @media only screen and (max-width: 56.25em) {
-      padding: 0 1rem;
-    }
-  }
-
+  
   &__text { 
     max-width: var(--max-width);
     margin-top: auto;
+
+    @media only screen and (max-width: 56.25em) {
+      padding: 0 1rem;
+    }
   }
 
   &__social {
