@@ -46,7 +46,8 @@ const Form = () => {
         clearForm()
         setSuccess(() => true)
         setTimeout(() => setSuccess(false), 1800)
-      }).catch(() => {
+      }).catch((error) => {
+        console.error(error);
         clearForm()
         setError(() => '*Could not submit the form')
         setTimeout(() => setError(''), 1800)
