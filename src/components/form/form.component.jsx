@@ -34,25 +34,32 @@ const Form = () => {
     e.preventDefault()
     setResolving(true)
 
-    const response = await fetch('http://localhost:8888/.netlify/functions/api/submit', {
-        method: "POST",
-        body: JSON.stringify(info),
-        headers: {
+    await fetch('.netlify/functions/api/submit', {
+      method: "POST",
+      body: JSON.stringify(info),
+      headers: {
         "Content-type": "application/json; charset=UTF-8"
+      }
+    }).then(async res => {  
+      const mailStatus = await res.json()
+
+      if (mailStatus.status === 'success' && res.status === 200) {
+        clearForm()
+        setSuccess(() => true)
+        setTimeout(() => setSuccess(false), 2200)
+      } else if (mailStatus.status === 'error' || res.status === 404) {
+        clearForm()
+        setError(() => '*Could not submit the form')
+        setTimeout(() => setError(''), 2000)
+      }
+    }).catch(err => {
+      if (err) {
+        clearForm()
+        setError(() => '*Could not submit the form')
+        setTimeout(() => setError(''), 2000)
       }
     })
 
-    const mailStatus = await response.json()
-
-    if (mailStatus.status === 'success') {
-      clearForm()
-      setSuccess(() => true)
-      setTimeout(() => setSuccess(false), 2200)
-    } else if (mailStatus.status === 'error') {
-      clearForm()
-      setError(() => '*Could not submit the form')
-      setTimeout(() => setError(''), 2000)          
-    }
   }
 
   return (
