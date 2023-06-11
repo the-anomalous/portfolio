@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-import emailjs from '@emailjs/browser';
 import { BtnSubmit } from '../buttons/buttons.component'
 
 const Form = () => {
@@ -8,12 +7,12 @@ const Form = () => {
     name: "",
     email: "",
     subject: "",
-    message: ""
+    text: ""
   })
 
   const [error, setError] = useState('')
   const [resolving, setResolving] = useState(false)
-  const [success, setSuccess] = useState(false)
+  const [success, setSuccess] = useState(false) 
 
   const handleChange = ({ target }) => {
     setInfo(prevInfo => {
@@ -27,31 +26,33 @@ const Form = () => {
       name: "",
       email: "",
       subject: "",
-      message: ""
+      text: ""
     })
   }
 
-  const onSubmit = e => {
+  const onSubmit = async e => {
     e.preventDefault()
     setResolving(true)
 
-    emailjs.send('service_lo4swod', 'template_05dpzj6', {
-      from_subject: info.subject,
-      to_name: "Aditya",
-      from_name: info.name,
-      message: info.message,
-      reply_to: info.email,
-    }, 'Eu5KMOJaMhO3jfCFn')
-      .then(() => {
-        clearForm()
-        setSuccess(() => true)
-        setTimeout(() => setSuccess(false), 1800)
-      }).catch((error) => {
-        console.error(error);
-        clearForm()
-        setError(() => '*Could not submit the form')
-        setTimeout(() => setError(''), 1800)
-      })
+    const response = await fetch('http://localhost:8888/.netlify/functions/api/submit', {
+        method: "POST",
+        body: JSON.stringify(info),
+        headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
+    })
+
+    const mailStatus = await response.json()
+
+    if (mailStatus.status === 'success') {
+      clearForm()
+      setSuccess(() => true)
+      setTimeout(() => setSuccess(false), 2200)
+    } else if (mailStatus.status === 'error') {
+      clearForm()
+      setError(() => '*Could not submit the form')
+      setTimeout(() => setError(''), 2000)          
+    }
   }
 
   return (
@@ -72,7 +73,7 @@ const Form = () => {
             className="form__input"
             id='name'
             name='name'
-            placeholder='Name'
+            placeholder='Your Name'
             value={info.name}
             onChange={handleChange}
             required
@@ -88,7 +89,7 @@ const Form = () => {
             className="form__input"
             id='email'
             name='email'
-            placeholder='Email'
+            placeholder='Your Email'
             value={info.email}
             onChange={handleChange}
             required />
@@ -116,9 +117,9 @@ const Form = () => {
           <textarea
             className="form__input form__textarea"
             id='message'
-            name='message'
+            name='text'
             placeholder='Message'
-            value={info.message}
+            value={info.text}
             onChange={handleChange}
             required />
           <label htmlFor="message" className="form__label">
@@ -129,7 +130,7 @@ const Form = () => {
         <div className="form__btn">
           <BtnSubmit className='form__submit btn__submit'>
             {
-              resolving && <>sending <div className="loader"></div></>
+              resolving && <><div className="loader"></div></>
             } {
               success && 'sent'
             } {

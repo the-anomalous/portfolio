@@ -27,10 +27,16 @@ const sendMail = async ({
   try {
     await transporter.sendMail(mailOption);
     console.log('message was sent');
-    return Promise.resolve("Message Sent Successfully!");
+    return Promise.resolve({
+      status: "success",
+      message: "Message Sent Successfully!"
+    });
   } catch (error) {
     console.log(error);
-    return Promise.reject(error);
+    return Promise.reject({
+      status: "error",
+      message: error
+    });
   }
 }
 

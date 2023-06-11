@@ -44,7 +44,7 @@ const Preloader = () => {
             setTagline('started freelancing, and loved it')
             StopChangingYear()
             setToggleClass(true)
-            return previousYear + 1;
+            return previousYear + 2;
           default:
             return previousYear + 1;
         }

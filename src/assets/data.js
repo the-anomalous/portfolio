@@ -16,7 +16,7 @@ const data = [
     route: '/project/instagram-clone',
     appLink: 'https://clothing-house.onrender.com/',
     githubLink: 'https://github.com/the-anomalous/clothing-house',
-    technologies: ['react', 'firebase', 'redux', 'stripe', 'sass', 'heruko'],
+    technologies: ['react', 'firebase', 'redux', 'stripe', 'sass', 'netlify'],
     imgPath: 'https://ik.imagekit.io/ml22hal4lxj/portfolio_images/clothing_house_Rt8YHWTXQ.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651070057412',
     videoPath: ['https://ik.imagekit.io/ml22hal4lxj/video/Clothing_House_e_Zn7CORx.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1651064008173', 'https://ik.imagekit.io/ml22hal4lxj/video/Clothing_House_dpjQDc_EK.webm?ik-sdk-version=javascript-1.4.3&updatedAt=1651064025814'],
     description: "Clothing House is a demo e-commerce web app. It's the first major project I created using React.js. Here I've used Redux for state management and Stripe to handle payments. it's a PWA so you can use it as an app on a desktop and also on mobile phones."
