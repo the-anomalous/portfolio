@@ -53,7 +53,6 @@ const Form = () => {
         "Content-type": "application/json; charset=UTF-8"
       }
     }).then(async res => {  
-      console.log(res);
       if (res.status !== 200) {
         onError()
         return
