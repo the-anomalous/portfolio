@@ -37,7 +37,7 @@ const Form = () => {
   }
 
   const onError = () => {
-    setError(() => '*Could not submit the form')
+    setError(() => '*Could not submit the mail')
     clearForm()
     setTimeout(() => setError(''), 2000)
   }
@@ -53,6 +53,7 @@ const Form = () => {
         "Content-type": "application/json; charset=UTF-8"
       }
     }).then(async res => {  
+      console.log(res);
       if (res.status !== 200) {
         onError()
         return
