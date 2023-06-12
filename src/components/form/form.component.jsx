@@ -30,6 +30,18 @@ const Form = () => {
     })
   }
 
+  const onSuccess = () => {
+    setSuccess(() => true)
+    clearForm()
+    setTimeout(() => setSuccess(false), 2200)
+  }
+
+  const onError = () => {
+    setError(() => '*Could not submit the form')
+    clearForm()
+    setTimeout(() => setError(''), 2000)
+  }
+
   const onSubmit = async e => {
     e.preventDefault()
     setResolving(true)
@@ -41,25 +53,21 @@ const Form = () => {
         "Content-type": "application/json; charset=UTF-8"
       }
     }).then(async res => {  
+      if (res.status !== 200) {
+        onError()
+        return
+      }
       const mailStatus = await res.json()
-
+      
       if (mailStatus.status === 'success' && res.status === 200) {
-        clearForm()
-        setSuccess(() => true)
-        setTimeout(() => setSuccess(false), 2200)
-      } else if (mailStatus.status === 'error' || res.status === 404) {
-        clearForm()
-        setError(() => '*Could not submit the form')
-        setTimeout(() => setError(''), 2000)
+        onSuccess()
+      } else if (mailStatus.status === 'error') {
+        onError()
       }
+    
     }).catch(err => {
-      if (err) {
-        clearForm()
-        setError(() => '*Could not submit the form')
-        setTimeout(() => setError(''), 2000)
-      }
+      if (err) { onError() }
     })
-
   }
 
   return (
